@@ -9,29 +9,22 @@ function createElementWithClass(tag, classToAdd) {
 function appendElement(appendTo, appendWhat) {
     appendTo.append(appendWhat)
 }
-function rangeNumber(max, min) {
+function rangeNumber(min, max) {
     let number = Math.floor(Math.random() * (max - min + 1)) + min;
     return number
 }
-function genSequenzaNumRandom() {
+function genSequenzaNumRandom(min, max, length) {
     const arrToGen = [];
-    while (arrToGen.length < 64) {
-        let newRandomNum = rangeNumber(64, 1);
+    while (arrToGen.length < length) {
+        let newRandomNum = rangeNumber(min, max);
         
         
         if(!arrToGen.includes(newRandomNum)) {
             arrToGen.push(newRandomNum)
         }
     }
-}
-function countDown() {
-    timer.innerHTML = x;
-    counter.innerHTML = y;
-    x--
-    if (x === 0) {
-        y++
-        x = 60;
-    }
+
+    return arrToGen
 }
 function oddEven(number) {
     let even = (number % 2 === 0)

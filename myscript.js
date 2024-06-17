@@ -11,7 +11,7 @@ console.log(randomNumber);
    
 
 //far partire un timer di 30 secondi
-let secondi = 2;
+let secondi = 30;
 
 let countDown = setTimeout(rovescio, secondi * 1000);
 

@@ -50,8 +50,14 @@ function after30Second() {
         }
     }
     //comunicare all'utente quanti e quali sono corretti
-    congratulation.innerHTML = "Congratulazioni, hai indovinato " + y + " numeri!";
-    rightAnswer.innerHTML = "I numeri indovinati sono: " + rightNumber;
+    if (rightNumber.length > 0) {
+        congratulation.innerHTML = "Congratulazioni, hai indovinato " + y + " numeri!";
+        rightAnswer.innerHTML = "I numeri indovinati sono: " + rightNumber;
+    }
+    else {
+        congratulation.innerHTML = "Mi dispiace, non hai indovinato nessun numero";
+    }
+    
     }
 
 
